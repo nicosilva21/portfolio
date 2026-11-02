@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nico Silva | Portrait & Travel Photographer, Los Angeles</title>
+  <meta name="description" content="Portrait and travel photographer based in Los Angeles. Bold color, creative angles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo">Nico Silva</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO: rotates through images in images/featured -->
+  <section class="hero" id="top">
+    <div class="hero__slides" id="heroSlides"></div>
+    <div class="hero__shade"></div>
+    <div class="hero__text">
+      <h1>Portrait &amp; Travel<br>Photographer</h1>
+      <p>Based in Los Angeles. Bold color, creative angles.</p>
+      <a class="btn" href="#work">View work</a>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">scroll</div>
+  </section>
+
+  <!-- WORK: mixed grid with filters -->
+  <section class="work" id="work">
+    <div class="work__head">
+      <h2>Selected Work</h2>
+      <div class="filters" id="filters" role="tablist" aria-label="Filter photos">
+        <button class="filter is-active" data-filter="all" role="tab">All</button>
+        <button class="filter" data-filter="portraits" role="tab">Portraits</button>
+        <button class="filter" data-filter="travel" role="tab">Travel</button>
+        <button class="filter" data-filter="street" role="tab">Street</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Portraits &nbsp;✦&nbsp; Travel &nbsp;✦&nbsp; Street &nbsp;✦&nbsp; Color &nbsp;✦&nbsp; Light &nbsp;✦&nbsp;</span>
+      <span>Portraits &nbsp;✦&nbsp; Travel &nbsp;✦&nbsp; Street &nbsp;✦&nbsp; Color &nbsp;✦&nbsp; Light &nbsp;✦&nbsp;</span>
+      <span>Portraits &nbsp;✦&nbsp; Travel &nbsp;✦&nbsp; Street &nbsp;✦&nbsp; Color &nbsp;✦&nbsp; Light &nbsp;✦&nbsp;</span>
+      <span>Portraits &nbsp;✦&nbsp; Travel &nbsp;✦&nbsp; Street &nbsp;✦&nbsp; Color &nbsp;✦&nbsp; Light &nbsp;✦&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__img">
+      <img src="images/IMG_4977.JPG" alt="Portrait of the photographer" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="about__text">
+      <h2>About</h2>
+      <p>Write 2 to 3 short sentences here. Who you are, what you shoot, and what makes your eye different. Mention Los Angeles and the kind of clients you want (brands, creatives, individuals).</p>
+      <p>Shot on Canon. Edited for color.</p>
+      <h3>Services</h3>
+      <ul>
+        <li>Portraits &amp; headshots</li>
+        <li>Brand &amp; lifestyle campaigns</li>
+        <li>Travel &amp; destination content</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Let's make something.</h2>
+    <a class="contact__mail" href="mailto:nicolassilva2226@gmail.com">nicolassilva2226@gmail.com</a>
+    <p class="contact__links">
+      <a href="https://instagram.com/n1c0_s1lva" target="_blank" rel="noopener">Instagram</a>
+    </p>
+    <form class="contact__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">© <span id="year"></span> Nico Silva · Los Angeles, CA</footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__prev" aria-label="Previous">‹</button>
+    <img class="lightbox__img" id="lightboxImg" alt="">
+    <button class="lightbox__nav lightbox__next" aria-label="Next">›</button>
+    <div class="lightbox__cap" id="lightboxCap"></div>
+  </div>
+
+  <script src="photos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
